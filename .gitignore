@@ -1,0 +1,11 @@
+# Archived draft assets & python scripts
+Removed/
+Removed/*
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# IDE & Editor files
+.vscode/
+.idea/

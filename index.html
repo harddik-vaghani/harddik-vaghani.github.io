@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HARDIK VAGHANI — Full Stack & AI Agent Engineer</title>
+    <meta name="description" content="Engineering digital systems that are fast, scalable, and performance-focused. Portfolio of Hardik Vaghani — Full Stack, Mobile & AI Agent Engineer.">
+    
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300..700;1,300..700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Core Assets CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- GSAP Animation Engine -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Ambient Overlay Layer -->
+    <div class="hero-vignette"></div>
+
+    <!-- Top Header Navigation Bar (Fixed Top Bar) -->
+    <header class="hero-top-bar" id="navbar">
+        <div class="availability-badge">
+            <span class="green-dot"></span>
+            <span class="badge-text">Available for New Project</span>
+        </div>
+
+        <nav class="center-nav">
+            <a href="#hero" class="center-nav-item active">Home</a>
+            <a href="#work" class="center-nav-item">Work <span class="nav-count">[03]</span></a>
+            <a href="#services" class="center-nav-item">Services & Stack</a>
+            <a href="#contact" class="center-nav-item">Contact</a>
+        </nav>
+
+        <div class="top-bar-right">
+            <a href="#contact" class="lets-talk-btn">
+                <span>Let's Talk</span>
+                <span class="arrow-icon">↗</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO SECTION -->
+    <section class="hero-container" id="hero">
+        <div class="hero-stage" id="hero-stage">
+            <!-- LAYER 1 (BEHIND): Stacked Offset Typography -->
+            <div class="hero-typography-container" id="hero-typography">
+                <h1 class="giant-name stacked">
+                    <span class="name-first">HARDIK</span>
+                    <span class="name-last">VAGHANI</span>
+                </h1>
+            </div>
+
+            <!-- LAYER 2 (FOREGROUND): Centered hero-portrait.webp Dual-Layer Character -->
+            <div class="hero-avatar-wrapper" id="hero-avatar-wrapper">
+                <!-- Base Black & White Image -->
+                <img src="assets/images/hero-portrait.webp" alt="Hardik Vaghani B&W" class="hero-avatar-img avatar-bw" id="avatar-bw">
+                
+                <!-- Hover Color Reveal Image -->
+                <img src="assets/images/hero-portrait.webp" alt="Hardik Vaghani Color" class="hero-avatar-img avatar-color" id="avatar-color">
+                
+                <!-- Transparent Light Orange Spotlight Overlay -->
+                <div class="avatar-spotlight-glow" id="spotlight-glow"></div>
+            </div>
+        </div>
+
+        <!-- Bottom Left Text & CTA Block -->
+        <div class="hero-bottom-left" id="hero-bottom-left">
+            <h2 class="hero-role-title">Full Stack Developer</h2>
+            <p class="hero-role-subtitle">Engineering digital systems that are fast, scalable, and performance-focused.</p>
+            <a href="#contact" class="collaborate-btn" id="collaborate-btn">
+                <span>Let's collaborate</span>
+                <span class="btn-arrow">↗</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION 2: SELECTED WORK / PROJECTS -->
+    <section class="section-container" id="work">
+        <div class="section-header">
+            <div class="section-tag">
+                <span class="tag-number">01 //</span>
+                <span class="tag-text">SELECTED WORK</span>
+            </div>
+            <h2 class="section-title">FEATURED PROJECTS</h2>
+            <p class="section-subtitle">Architecting high-performance SaaS platforms, AI agent systems & native mobile apps.</p>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <div class="project-card-header">
+                    <span class="project-number">01</span>
+                    <span class="project-badge">AI & LLM AGENTS</span>
+                </div>
+                <h3 class="project-title">Autonomous AI Agent HQ</h3>
+                <p class="project-desc">Enterprise multi-agent orchestration platform built for automated workflow execution, document RAG retrieval, and vector memory synchronization.</p>
+                <div class="project-tech">
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">LangChain</span>
+                    <span class="tech-pill">FastAPI</span>
+                    <span class="tech-pill">Qdrant</span>
+                    <span class="tech-pill">React</span>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com" target="_blank" rel="noopener" class="project-link">
+                        <span>Explore Architecture</span>
+                        <span class="arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <div class="project-card-header">
+                    <span class="project-number">02</span>
+                    <span class="project-badge">FULL STACK SAAS</span>
+                </div>
+                <h3 class="project-title">Nexus Cloud Analytics Platform</h3>
+                <p class="project-desc">Multi-tenant real-time metrics dashboard and billing infrastructure processing 50,000+ API requests per month with sub-500ms latency.</p>
+                <div class="project-tech">
+                    <span class="tech-pill">Next.js</span>
+                    <span class="tech-pill">TypeScript</span>
+                    <span class="tech-pill">PostgreSQL</span>
+                    <span class="tech-pill">Docker</span>
+                    <span class="tech-pill">Tailwind</span>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com" target="_blank" rel="noopener" class="project-link">
+                        <span>View Live Platform</span>
+                        <span class="arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card">
+                <div class="project-card-header">
+                    <span class="project-number">03</span>
+                    <span class="project-badge">MOBILE ENGINEERING</span>
+                </div>
+                <h3 class="project-title">Pulse Mobile FinTech App</h3>
+                <p class="project-desc">Cross-platform mobile wallet & asset tracker with biometrics authentication, encrypted offline sync, and 150,000+ total downloads.</p>
+                <div class="project-tech">
+                    <span class="tech-pill">Flutter</span>
+                    <span class="tech-pill">Dart</span>
+                    <span class="tech-pill">Node.js</span>
+                    <span class="tech-pill">GraphQL</span>
+                    <span class="tech-pill">Redis</span>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com" target="_blank" rel="noopener" class="project-link">
+                        <span>App Store Specs</span>
+                        <span class="arrow">↗</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: SERVICES & TECH STACK -->
+    <section class="section-container alt-bg" id="services">
+        <div class="section-header">
+            <div class="section-tag">
+                <span class="tag-number">02 //</span>
+                <span class="tag-text">SERVICES & TECH STACK</span>
+            </div>
+            <h2 class="section-title">CORE CAPABILITIES</h2>
+            <p class="section-subtitle">Delivering robust digital infrastructure from concept to production deployment.</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Capability 1 -->
+            <div class="service-card">
+                <div class="service-icon">🤖</div>
+                <h3 class="service-title">AI Agent Systems & RAG</h3>
+                <p class="service-desc">Building autonomous LLM agents, vector search retrieval (RAG), custom tool integrations, and intelligent workflow automation.</p>
+                <div class="service-tech-tags">
+                    <span class="skill-badge orange">LangChain</span>
+                    <span class="skill-badge orange">OpenAI API</span>
+                    <span class="skill-badge orange">Qdrant Vector DB</span>
+                </div>
+            </div>
+
+            <!-- Capability 2 -->
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3 class="service-title">Full Stack Web Engineering</h3>
+                <p class="service-desc">Designing modern Next.js/React web applications with fast, secure Node.js & Python FastAPI backend microservices.</p>
+                <div class="service-tech-tags">
+                    <span class="skill-badge highlight">Next.js</span>
+                    <span class="skill-badge highlight">React</span>
+                    <span class="skill-badge">TypeScript</span>
+                    <span class="skill-badge">FastAPI</span>
+                </div>
+            </div>
+
+            <!-- Capability 3 -->
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3 class="service-title">Native & Mobile Engineering</h3>
+                <p class="service-desc">Developing high-performance Flutter and Android apps with butter-smooth 60fps UI, native bridges, and offline database sync.</p>
+                <div class="service-tech-tags">
+                    <span class="skill-badge">Flutter</span>
+                    <span class="skill-badge">Dart</span>
+                    <span class="skill-badge">Android Native</span>
+                </div>
+            </div>
+
+            <!-- Capability 4 -->
+            <div class="service-card">
+                <div class="service-icon">🛠️</div>
+                <h3 class="service-title">Cloud Infrastructure & DevOps</h3>
+                <p class="service-desc">Architecting PostgreSQL/Redis databases, Docker container environments, automated CI/CD deployment, and AWS cloud setups.</p>
+                <div class="service-tech-tags">
+                    <span class="skill-badge">PostgreSQL</span>
+                    <span class="skill-badge">Docker</span>
+                    <span class="skill-badge">AWS Cloud</span>
+                    <span class="skill-badge">Redis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: CONTACT & GET IN TOUCH -->
+    <section class="section-container contact-section" id="contact">
+        <div class="contact-box">
+            <div class="contact-left">
+                <div class="section-tag">
+                    <span class="tag-number">03 //</span>
+                    <span class="tag-text">GET IN TOUCH</span>
+                </div>
+                <h2 class="contact-title">LET'S BUILD SOMETHING EXTRAORDINARY</h2>
+                <p class="contact-subtitle">Have a project in mind, an AI engineering challenge, or looking to hire? Send me a message and let's collaborate.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-detail-item">
+                        <span class="detail-label">EMAIL:</span>
+                        <a href="mailto:harddikvaghani@gmail.com" class="detail-value">harddikvaghani@gmail.com</a>
+                    </div>
+                    <div class="contact-detail-item">
+                        <span class="detail-label">PHONE:</span>
+                        <a href="tel:+917698458318" class="detail-value">+91 76984 58318</a>
+                    </div>
+                    <div class="contact-detail-item">
+                        <span class="detail-label">LOCATION:</span>
+                        <span class="detail-value">Surat, Gujarat, India (Open for Remote Worldwide)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <form id="contact-form" class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Message dispatched! Thank you for reaching out.');">
+                    <div class="form-group">
+                        <label for="form-name">YOUR NAME</label>
+                        <input type="text" id="form-name" placeholder="Elon Musk / Founder / CTO" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-email">YOUR EMAIL</label>
+                        <input type="email" id="form-email" placeholder="client@company.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-message">PROJECT SCOPE & DETAILS</label>
+                        <textarea id="form-message" rows="4" placeholder="We need an AI Agent platform / Full Stack web app built..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <span class="btn-arrow">↗</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <span class="footer-brand">HARDIK VAGHANI</span>
+                <span class="footer-copy">© 2026 All rights reserved. Engineering with precision.</span>
+            </div>
+            <div class="footer-right">
+                <a href="#hero" class="back-to-top">
+                    <span>Back to Top</span>
+                    <span class="arrow">↑</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Production JavaScript Assets -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
