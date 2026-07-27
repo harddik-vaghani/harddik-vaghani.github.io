@@ -20,12 +20,25 @@
     let currentX = 0, currentY = 0;   // Lerped position
 
     /* --------------------------------------------------------------------------
-       1. Light-Orange Spotlight Color Reveal Hover Tracking
+       1. Light-Orange Spotlight Color Reveal Hover Tracking (Desktop Only)
        -------------------------------------------------------------------------- */
+    function isMobileOrTouch() {
+        return window.matchMedia('(max-width: 768px)').matches || 
+               window.matchMedia('(pointer: coarse)').matches;
+    }
+
     function initSpotlightReveal() {
         if (!avatarWrapper || !avatarColor) return;
 
+        // On mobile or touch devices, disable orange spotlight reveal completely
+        if (isMobileOrTouch()) {
+            avatarWrapper.classList.remove('is-hovered');
+            avatarColor.style.clipPath = 'circle(0px at 50% 50%)';
+            return;
+        }
+
         function updateSpotlight(e) {
+            if (isMobileOrTouch()) return;
             const rect = avatarWrapper.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
@@ -39,17 +52,53 @@
         }
 
         avatarWrapper.addEventListener('mouseenter', (e) => {
+            if (isMobileOrTouch()) return;
             avatarWrapper.classList.add('is-hovered');
             updateSpotlight(e);
         });
 
         avatarWrapper.addEventListener('mousemove', (e) => {
+            if (isMobileOrTouch()) return;
             updateSpotlight(e);
         });
 
         avatarWrapper.addEventListener('mouseleave', () => {
             avatarWrapper.classList.remove('is-hovered');
             avatarColor.style.clipPath = `circle(0px at 50% 50%)`;
+        });
+
+        window.addEventListener('resize', () => {
+            if (isMobileOrTouch()) {
+                avatarWrapper.classList.remove('is-hovered');
+                avatarColor.style.clipPath = 'circle(0px at 50% 50%)';
+            }
+        });
+    }
+
+    /* --------------------------------------------------------------------------
+       1B. Mobile Navigation Menu Toggle
+       -------------------------------------------------------------------------- */
+    function initMobileMenu() {
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navDrawer = document.getElementById('mobile-nav-drawer');
+        const navItems = document.querySelectorAll('.mobile-nav-item');
+
+        if (!menuBtn || !navDrawer) return;
+
+        function toggleMenu() {
+            menuBtn.classList.toggle('is-active');
+            navDrawer.classList.toggle('is-active');
+            document.body.classList.toggle('menu-open');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menuBtn.classList.remove('is-active');
+                navDrawer.classList.remove('is-active');
+                document.body.classList.remove('menu-open');
+            });
         });
     }
 
@@ -60,6 +109,7 @@
         if (!typographyContainer) return;
 
         function onMouseMove(e) {
+            if (isMobileOrTouch()) return;
             const width = window.innerWidth;
             const height = window.innerHeight;
 
@@ -69,6 +119,15 @@
         }
 
         function updateParallax() {
+            if (isMobileOrTouch()) {
+                typographyContainer.style.transform = 'translate(-50%, -50%)';
+                if (nameFirst && nameLast) {
+                    nameFirst.style.transform = 'none';
+                    nameLast.style.transform = 'none';
+                }
+                return;
+            }
+
             // Smooth lerping (0.07 damping)
             currentX += (mouseX - currentX) * 0.07;
             currentY += (mouseY - currentY) * 0.07;
@@ -196,6 +255,7 @@
        -------------------------------------------------------------------------- */
     function init() {
         initSpotlightReveal();
+        initMobileMenu();
         initTypographyParallax();
         initScrollTracking();
         runEntranceAnimations();
