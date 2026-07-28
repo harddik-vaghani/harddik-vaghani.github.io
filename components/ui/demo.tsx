@@ -41,7 +41,7 @@ const cardsData: CardData[] = [
   {
     id: "evaragold",
     badge: "FEATURED · 3D SHOWROOM",
-    url: "https://evaragold.vercel.app",
+    url: "https://evaragold.com",
     front: {
       imageSrc: "assets/images/evaragold.webp",
       imageAlt: "EvaraGold Luxury Jewellery Digital Showroom",
