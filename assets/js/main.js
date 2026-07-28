@@ -251,6 +251,37 @@
     }
 
     /* --------------------------------------------------------------------------
+       4B. Native IntersectionObserver Scroll Reveal Engine
+       -------------------------------------------------------------------------- */
+    function initScrollRevealEngine() {
+        const revealElements = document.querySelectorAll(
+            '.project-card, .timeline-card, .stack-category-card, .about-metric-card, .section-header'
+        );
+
+        if (!revealElements.length) return;
+
+        revealElements.forEach((el, index) => {
+            el.classList.add('reveal-on-scroll');
+            const delay = (index % 4) + 1;
+            el.classList.add(`reveal-delay-${delay}`);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => observer.observe(el));
+    }
+
+    /* --------------------------------------------------------------------------
        5. Initialization
        -------------------------------------------------------------------------- */
     function init() {
@@ -258,6 +289,7 @@
         initMobileMenu();
         initTypographyParallax();
         initScrollTracking();
+        initScrollRevealEngine();
         runEntranceAnimations();
     }
 

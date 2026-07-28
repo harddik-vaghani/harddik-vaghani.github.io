@@ -17,6 +17,9 @@
     <!-- GSAP Animation Engine -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Three.js 3D WebGL Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
 
@@ -32,12 +35,17 @@
 
         <nav class="center-nav">
             <a href="#hero" class="center-nav-item active">Home</a>
+            <a href="#about" class="center-nav-item">About <span class="nav-count">[3D]</span></a>
             <a href="#work" class="center-nav-item">Work <span class="nav-count">[03]</span></a>
             <a href="#services" class="center-nav-item">Services & Stack</a>
             <a href="#contact" class="center-nav-item">Contact</a>
         </nav>
 
         <div class="top-bar-right">
+            <a href="assets/HardikVaghani_Resume.pdf" target="_blank" rel="noopener" class="resume-btn" download>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Resume</span>
+            </a>
             <a href="#contact" class="lets-talk-btn">
                 <span>Let's Talk</span>
                 <span class="arrow-icon">↗</span>
@@ -52,9 +60,11 @@
         <!-- Mobile Drawer Navigation -->
         <div class="mobile-nav-drawer" id="mobile-nav-drawer">
             <a href="#hero" class="mobile-nav-item">Home</a>
+            <a href="#about" class="mobile-nav-item">About [3D]</a>
             <a href="#work" class="mobile-nav-item">Work</a>
             <a href="#services" class="mobile-nav-item">Services & Stack</a>
             <a href="#contact" class="mobile-nav-item">Contact</a>
+            <a href="assets/HardikVaghani_Resume.pdf" target="_blank" rel="noopener" class="mobile-nav-item mobile-resume-item" download>⬇ Download Resume</a>
         </div>
     </header>
 
@@ -84,8 +94,13 @@
 
         <!-- Bottom Left Text & CTA Block -->
         <div class="hero-bottom-left" id="hero-bottom-left">
-            <h2 class="hero-role-title">Full Stack Developer</h2>
-            <p class="hero-role-subtitle">Engineering digital systems that are fast, scalable, and performance-focused.</p>
+            <h2 class="hero-role-title">Full-Stack, Mobile App & AI Agent Developer</h2>
+            <div class="hero-mobile-bullets">
+                <span class="hero-bullet-item"><span class="bullet-dot">•</span> Full-Stack Development</span>
+                <span class="hero-bullet-item"><span class="bullet-dot">•</span> Mobile App Development</span>
+                <span class="hero-bullet-item"><span class="bullet-dot">•</span> AI Agent Workflows & RAG</span>
+            </div>
+            <p class="hero-role-subtitle">Software Engineer with 5+ years experience building AI agent workflows, full-stack web platforms (Next.js, React, Node.js), and mobile applications.</p>
             <a href="#contact" class="collaborate-btn" id="collaborate-btn">
                 <span>Let's collaborate</span>
                 <span class="btn-arrow">↗</span>
@@ -93,94 +108,955 @@
         </div>
     </section>
 
-    <!-- SECTION 2: SELECTED WORK / PROJECTS -->
-    <section class="section-container" id="work">
-        <div class="section-header">
-            <div class="section-tag">
-                <span class="tag-number">01 //</span>
-                <span class="tag-text">SELECTED WORK</span>
-            </div>
-            <h2 class="section-title">FEATURED PROJECTS</h2>
-            <p class="section-subtitle">Architecting high-performance SaaS platforms, AI agent systems & native mobile apps.</p>
-        </div>
-
-        <div class="projects-grid">
-            <!-- Project Card 1 -->
-            <div class="project-card">
-                <div class="project-card-header">
-                    <span class="project-number">01</span>
-                    <span class="project-badge">AI & LLM AGENTS</span>
+    <!-- SECTION 2: FULL-WIDTH EXECUTIVE ABOUT & BALANCED 2x2 MATRIX SECTION -->
+    <section class="about-fullwidth-section" id="about">
+        <div class="about-inner-container">
+            <div class="section-header">
+                <div class="section-tag">
+                    <span class="tag-number">01 //</span>
+                    <span class="tag-text">ABOUT HARDIK VAGHANI</span>
                 </div>
-                <h3 class="project-title">Autonomous AI Agent HQ</h3>
-                <p class="project-desc">Enterprise multi-agent orchestration platform built for automated workflow execution, document RAG retrieval, and vector memory synchronization.</p>
-                <div class="project-tech">
-                    <span class="tech-pill">Python</span>
-                    <span class="tech-pill">LangChain</span>
-                    <span class="tech-pill">FastAPI</span>
-                    <span class="tech-pill">Qdrant</span>
-                    <span class="tech-pill">React</span>
-                </div>
-                <div class="project-footer">
-                    <a href="https://github.com" target="_blank" rel="noopener" class="project-link">
-                        <span>Explore Architecture</span>
-                        <span class="arrow">↗</span>
-                    </a>
-                </div>
+                <h2 class="section-title">ENGINEERING FAST, SCALABLE & INTELLIGENT DIGITAL SYSTEMS</h2>
             </div>
 
-            <!-- Project Card 2 -->
-            <div class="project-card">
-                <div class="project-card-header">
-                    <span class="project-number">02</span>
-                    <span class="project-badge">FULL STACK SAAS</span>
+            <!-- TOP ROW: Executive Bio & 2x2 Metrics Grid (Equal Height Alignment) -->
+            <div class="about-top-grid">
+                <!-- Left Column: Bio & Action Buttons -->
+                <div class="executive-bio-box">
+                    <h3 class="headline-quote">
+                        "Building scalable Full-Stack web platforms, AI agent workflows, and native mobile applications on cloud infrastructure."
+                    </h3>
+                    <p class="bio-paragraph">
+                        I am Hardik Vaghani — a Software Engineer based in Surat, India with 5+ years of mobile app development experience, specializing over the past 1.5+ years in Full-Stack Web Architecture (Next.js, React, Angular, Node.js/MERN) and AI Integrations. Proven track record of optimizing application performance, building scalable API services, and deploying high-availability applications across GCP and Vercel infrastructure.
+                    </p>
+                    
+                    <div class="executive-cta-row">
+                        <a href="#contact" class="lets-talk-btn">
+                            <span>Get In Touch</span>
+                            <span class="arrow-icon">↗</span>
+                        </a>
+                        <a href="#work" class="secondary-outline-btn">
+                            <span>Explore Featured Work</span>
+                            <span class="arrow-icon">↓</span>
+                        </a>
+                    </div>
                 </div>
-                <h3 class="project-title">Nexus Cloud Analytics Platform</h3>
-                <p class="project-desc">Multi-tenant real-time metrics dashboard and billing infrastructure processing 50,000+ API requests per month with sub-500ms latency.</p>
-                <div class="project-tech">
-                    <span class="tech-pill">Next.js</span>
-                    <span class="tech-pill">TypeScript</span>
-                    <span class="tech-pill">PostgreSQL</span>
-                    <span class="tech-pill">Docker</span>
-                    <span class="tech-pill">Tailwind</span>
-                </div>
-                <div class="project-footer">
-                    <a href="https://github.com" target="_blank" rel="noopener" class="project-link">
-                        <span>View Live Platform</span>
-                        <span class="arrow">↗</span>
-                    </a>
+
+                <!-- Right Column: 2x2 Executive Stat Cards Grid -->
+                <div class="executive-stats-2x2">
+                    <div class="stat-grid-card">
+                        <span class="stat-num">05+</span>
+                        <span class="stat-title">Years App Experience</span>
+                        <span class="stat-sub">Mobile Dev & Full-Stack Web Architecture</span>
+                    </div>
+                    <div class="stat-grid-card">
+                        <span class="stat-num">150K+</span>
+                        <span class="stat-title">Play Store Downloads</span>
+                        <span class="stat-sub">5+ Production Native Android Apps Deployed</span>
+                    </div>
+                    <div class="stat-grid-card">
+                        <span class="stat-num">50K+</span>
+                        <span class="stat-title">Monthly AI Requests</span>
+                        <span class="stat-sub">Automated Pipelines with Sub-500ms Routing</span>
+                    </div>
+                    <div class="stat-grid-card">
+                        <span class="stat-num">500K+</span>
+                        <span class="stat-title">Daily Data Records</span>
+                        <span class="stat-sub">Asynchronous Scraping & Distributed Pipelines</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- Project Card 3 -->
-            <div class="project-card">
-                <div class="project-card-header">
-                    <span class="project-number">03</span>
-                    <span class="project-badge">MOBILE ENGINEERING</span>
+            <!-- BOTTOM ROW: Production Tech Stack Matrix (2x2 Balanced Grid) -->
+            <div class="about-stack-section">
+                <div class="stack-section-header">
+                    <div>
+                        <div class="section-tag">
+                            <span class="tag-number">02 //</span>
+                            <span class="tag-text">PRODUCTION TECH STACK</span>
+                        </div>
+                        <h3 class="stack-section-title">SYSTEM ARCHITECTURE MATRIX</h3>
+                    </div>
+
+                    <!-- Category Filter Tabs -->
+                    <div class="stack-category-tabs">
+                        <button class="stack-category-btn active" data-category="all">All Stack</button>
+                        <button class="stack-category-btn" data-category="ai">AI & Agents</button>
+                        <button class="stack-category-btn" data-category="web">Full-Stack</button>
+                        <button class="stack-category-btn" data-category="mobile">Mobile</button>
+                        <button class="stack-category-btn" data-category="cloud">DevOps</button>
+                    </div>
                 </div>
-                <h3 class="project-title">Pulse Mobile FinTech App</h3>
-                <p class="project-desc">Cross-platform mobile wallet & asset tracker with biometrics authentication, encrypted offline sync, and 150,000+ total downloads.</p>
-                <div class="project-tech">
-                    <span class="tech-pill">Flutter</span>
-                    <span class="tech-pill">Dart</span>
-                    <span class="tech-pill">Node.js</span>
-                    <span class="tech-pill">GraphQL</span>
-                    <span class="tech-pill">Redis</span>
-                </div>
-                <div class="project-footer">
-                    <a href="https://github.com" target="_blank" rel="noopener" class="project-link">
-                        <span>App Store Specs</span>
-                        <span class="arrow">↗</span>
-                    </a>
+
+                <!-- Balanced 2x2 Tech Category Matrix Grid -->
+                <div class="tech-matrix-2x2">
+                    <!-- Card 1: AI & LLM Agents -->
+                    <div class="tech-category-card" data-category="ai">
+                        <div class="card-top">
+                            <span class="card-icon">🤖</span>
+                            <span class="card-badge orange">AI AGENTS & MCP</span>
+                        </div>
+                        <h4 class="card-title">AI Agent Workflows & RAG Systems</h4>
+                        <p class="card-desc">Architecting production AI pipelines with Claude & OpenAI APIs, LangChain, MCP Server integrations, RAG retrieval systems, N8N, and Zapier workflow automation.</p>
+                        <div class="card-pills">
+                            <span class="tech-pill">Claude API</span>
+                            <span class="tech-pill">OpenAI API</span>
+                            <span class="tech-pill">MCP Server</span>
+                            <span class="tech-pill">LangChain</span>
+                            <span class="tech-pill">MQL4 / MQL5</span>
+                            <span class="tech-pill">N8N</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Full Stack Web Engineering -->
+                    <div class="tech-category-card" data-category="web">
+                        <div class="card-top">
+                            <span class="card-icon">⚡</span>
+                            <span class="card-badge dark">FULL-STACK & WEB</span>
+                        </div>
+                        <h4 class="card-title">Next.js, React & Node.js Architecture</h4>
+                        <p class="card-desc">Building high-throughput SaaS platforms using Next.js, React, Angular, Node.js/MERN, FastAPI, Supabase (PostgreSQL), RESTful APIs, and real-time WebSockets.</p>
+                        <div class="card-pills">
+                            <span class="tech-pill">Next.js</span>
+                            <span class="tech-pill">React</span>
+                            <span class="tech-pill">Angular</span>
+                            <span class="tech-pill">Node.js/MERN</span>
+                            <span class="tech-pill">FastAPI</span>
+                            <span class="tech-pill">Supabase</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Mobile Engineering -->
+                    <div class="tech-category-card" data-category="mobile">
+                        <div class="card-top">
+                            <span class="card-icon">📱</span>
+                            <span class="card-badge green">MOBILE ENGINEERING</span>
+                        </div>
+                        <h4 class="card-title">Native Android (Java/Kotlin) & React Native</h4>
+                        <p class="card-desc">5+ production Android apps on Google Play reaching 150k+ downloads. Offline-first synchronization with Room DB, Clean Architecture, MVVM, and background services.</p>
+                        <div class="card-pills">
+                            <span class="tech-pill">Java</span>
+                            <span class="tech-pill">Kotlin</span>
+                            <span class="tech-pill">React Native</span>
+                            <span class="tech-pill">Room DB</span>
+                            <span class="tech-pill">MVVM</span>
+                            <span class="tech-pill">Background Services</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Cloud Infra & DevOps -->
+                    <div class="tech-category-card" data-category="cloud">
+                        <div class="card-top">
+                            <span class="card-icon">🛠️</span>
+                            <span class="card-badge blue">DEVOPS & INFRASTRUCTURE</span>
+                        </div>
+                        <h4 class="card-title">GCP, Vercel, Hetzner VPS & Docker</h4>
+                        <p class="card-desc">Automated cloud deployments across GCP, Vercel, and Hetzner VPS using Docker, Nginx, GitHub Actions CI/CD pipelines, Asyncio, and Playwright automation.</p>
+                        <div class="card-pills">
+                            <span class="tech-pill">GCP</span>
+                            <span class="tech-pill">Vercel</span>
+                            <span class="tech-pill">Hetzner VPS</span>
+                            <span class="tech-pill">Docker</span>
+                            <span class="tech-pill">Nginx</span>
+                            <span class="tech-pill">CI/CD Pipelines</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 3: SERVICES & TECH STACK -->
-    <section class="section-container alt-bg" id="services">
+    <!-- SECTION 3: FEATURED PROJECTS (ALL 8 DELIVERABLES FROM PORTFOLIO.PDF) -->
+    <section class="section-container" id="work">
         <div class="section-header">
             <div class="section-tag">
-                <span class="tag-number">02 //</span>
+                <span class="tag-number">03 //</span>
+                <span class="tag-text">SELECTED WORK</span>
+            </div>
+            <h2 class="section-title">FEATURED PROJECTS & DELIVERABLES</h2>
+            <p class="section-subtitle">Live production platforms, AI vision & creative engines, automated trading bots, and web scraping pipelines.</p>
+        </div>
+
+        <div class="projects-flipping-grid">
+            <!-- Project 01: ScanyShare (FLAGSHIP HIGHLIGHTED PROJECT) -->
+            <div class="flipping-card-container flagship-card">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/scanyshare.webp" alt="ScanyShare | Instant QR Code File Share & P2P Transfer" class="card-img">
+                            <span class="card-badge orange flagship-badge">★ FLAGSHIP · LIVE APP</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">ScanyShare</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill highlight">Decentralize Tech</span>
+                                <span class="tech-pill highlight">P2P Transfer</span>
+                                <span class="tech-pill">QR Pairing</span>
+                                <span class="tech-pill">React</span>
+                                <span class="tech-pill">JavaScript</span>
+                                <span class="tech-pill">WebSockets</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">01 // LIVE FLAGSHIP ARCHITECTURE</span>
+                            <h4 class="card-back-title">ScanyShare.com</h4>
+                            <p class="card-back-desc">Instant QR code file share and P2P direct transfer tool. Enables secure end-to-end peer-to-peer sharing of files, links, and chat between PC, Mac, Android & iOS with zero login, no cloud storage, and unlimited file size.</p>
+                        </div>
+                        <div class="card-metrics-box flagship-metrics">
+                            <span class="metric-highlight">Zero Login | Unlimited File Size</span>
+                            <span class="metric-sub">P2P Encrypted · PC, Mac, Android & iOS</span>
+                        </div>
+                        <a href="https://scanyshare.com" target="_blank" rel="noopener" class="card-flip-cta flagship-cta">
+                            <span>Visit scanyshare.com</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 02: EvaraGold -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/evaragold.webp" alt="EvaraGold Jewellery Showroom" class="card-img">
+                            <span class="card-badge green">FEATURED · 3D WEB</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">EvaraGold Jewellery - Ecommerce</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">React.js</span>
+                                <span class="tech-pill">Supabase</span>
+                                <span class="tech-pill">GCP</span>
+                                <span class="tech-pill">GSAP</span>
+                                <span class="tech-pill">Tailwind</span>
+                                <span class="tech-pill">Vue.js</span>
+                                <span class="tech-pill">FastAPI</span>
+                                <span class="tech-pill">Stripe</span>
+                                <span class="tech-pill">Live Scraping</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">02 // PROJECT SPECS</span>
+                            <h4 class="card-back-title">EvaraGold Jewellery - Ecommerce</h4>
+                            <p class="card-back-desc">Built 3D WebGL scrollytelling homepage, live gold rate ticker, product catalogue with category filters, WhatsApp enquiry integration, and Vercel & GCP deployment with all the Ecommerce Custom features.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">Smooth animations | Live Gold Ticker | Ecommerce Capabilities</span>
+                            <span class="metric-sub">evaragold.vercel.app</span>
+                        </div>
+                        <a href="https://evaragold.vercel.app" target="_blank" rel="noopener" class="card-flip-cta">
+                            <span>Visit Live App</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 03: SoSurat.com -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/sosurat.webp" alt="SoSurat.com City Discovery Portal" class="card-img">
+                            <span class="card-badge dark">CITY DISCOVERY PORTAL</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">SoSurat.com</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">Next.js</span>
+                                <span class="tech-pill">Node.js</span>
+                                <span class="tech-pill">Tailwind</span>
+                                <span class="tech-pill">Vercel</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">03 // PROJECT SPECS</span>
+                            <h4 class="card-back-title">SoSurat.com</h4>
+                            <p class="card-back-desc">Engineered Surat's primary city discovery portal featuring multi-category listings, verified business directory, role-based authentication, and fast SSR page loads.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">Surat #1 Portal | Role Auth</span>
+                            <span class="metric-sub">sosurat.com</span>
+                        </div>
+                        <a href="https://sosurat.com" target="_blank" rel="noopener" class="card-flip-cta">
+                            <span>Visit sosurat.com</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 04: AdShot+ Studio -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/adshot.webp" alt="AdShot+ Studio AI Platform" class="card-img">
+                            <span class="card-badge orange">AI CREATIVE SAAS</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">AdShot+ Studio</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">React</span>
+                                <span class="tech-pill">AI API</span>
+                                <span class="tech-pill">Tailwind CSS</span>
+                                <span class="tech-pill">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">04 // PROJECT SPECS</span>
+                            <h4 class="card-back-title">AdShot+ Studio</h4>
+                            <p class="card-back-desc">Engineered LLM copywriting workflows and real-time preview rendering, reducing ad creation time from hours down to under minutes with automated variant generation.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">&lt; 2 Min Generation Time</span>
+                            <span class="metric-sub">adshot.studio</span>
+                        </div>
+                        <a href="https://adshot.studio" target="_blank" rel="noopener" class="card-flip-cta">
+                            <span>Visit adshot.studio</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 05: GalaxyGlobalTech -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/galaxyglobaltech.webp" alt="GalaxyGlobalTech Corporate Site" class="card-img">
+                            <span class="card-badge blue">CORPORATE ENGINEERING</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">GalaxyGlobalTech</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">Next.js</span>
+                                <span class="tech-pill">Tailwind</span>
+                                <span class="tech-pill">Vercel</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">04 // PROJECT SPECS</span>
+                            <h4 class="card-back-title">GalaxyGlobalTech</h4>
+                            <p class="card-back-desc">Architected high-performance corporate platform with interactive service showcases, team highlights, animated UI elements, and Vercel cloud deployment.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">Sub-400ms Response SLA</span>
+                            <span class="metric-sub">galaxyglobaltech.vercel.app</span>
+                        </div>
+                        <a href="https://galaxyglobaltech.vercel.app" target="_blank" rel="noopener" class="card-flip-cta">
+                            <span>Visit Live Corporate Site</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 05: VercelPay Gate -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/vercelpay.webp" alt="VercelPay Gate Custom Payment Gateway" class="card-img">
+                            <span class="card-badge orange">PAYMENT GATEWAY</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">VercelPay Gate</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">Next.js</span>
+                                <span class="tech-pill">Node.js</span>
+                                <span class="tech-pill">Supabase</span>
+                                <span class="tech-pill">PostgreSQL</span>
+                                <span class="tech-pill">REST APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">05 // ARCHITECTURAL SPECS</span>
+                            <h4 class="card-back-title">VercelPay Gate</h4>
+                            <p class="card-back-desc">High-security custom payment processing platform featuring automated webhook signature verification, real-time transaction ledger logging, and Custom Expiry checkouts.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">&lt; 500ms Checkout Latency</span>
+                            <span class="metric-sub">Custom Payment Infrastructure</span>
+                        </div>
+                        <a href="#contact" class="card-flip-cta">
+                            <span>Gateway Specs</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 06: Intraday Trading Bot -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/intradaybot.webp" alt="Intraday Trading Bot" class="card-img">
+                            <span class="card-badge dark">ALGORITHMIC TRADING</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">Intraday Trading Bot</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Dhan API</span>
+                                <span class="tech-pill">Telegram Bot</span>
+                                <span class="tech-pill">MQL4/5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">06 // INTERNAL TOOL SPECS</span>
+                            <h4 class="card-back-title">Intraday Trading Bot</h4>
+                            <p class="card-back-desc">Designed quantitative algorithmic execution engine connected to Dhan API with dynamic position sizing, automated risk controls, and instant Telegram execution alerts.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">Backtested Setups | Algo Risk Control</span>
+                            <span class="metric-sub">Automated Risk Management</span>
+                        </div>
+                        <a href="#contact" class="card-flip-cta">
+                            <span>Internal Tool Specs</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 07: Telegram Support Bot -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/telegrambot.webp" alt="Telegram Support Bot" class="card-img">
+                            <span class="card-badge green">BOT AUTOMATION</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">Telegram Support Bot</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Telegram Bot</span>
+                                <span class="tech-pill">Vercel</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">07 // INTERNAL TOOL SPECS</span>
+                            <h4 class="card-back-title">Telegram Support Bot</h4>
+                            <p class="card-back-desc">Built automated support bot handling multi-step user onboarding, OTP email verification, automated ticket routing, and Vercel cloud deployment.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">Ticket Generations | Auto Replay Machanisum | Onboarding System</span>
+                            <span class="metric-sub">Vercel Cloud Host</span>
+                        </div>
+                        <a href="#contact" class="card-flip-cta">
+                            <span>Internal Tool Specs</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 08: Web Scraping Agents -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/webscraper.webp" alt="Web Scraping Agents" class="card-img">
+                            <span class="card-badge orange">DATA PIPELINES</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">Web Scraping Agents</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Playwright</span>
+                                <span class="tech-pill">asyncio</span>
+                                <span class="tech-pill">BeautifulSoup</span>
+                                <span class="tech-pill">LLM Jailbreaks</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">08 // INTERNAL TOOL SPECS</span>
+                            <h4 class="card-back-title">Web Scraping Agents</h4>
+                            <p class="card-back-desc">Asynchronous web scraping engine with proxy rotation and automated retries, processing 500+ daily records into structured analytical schemas with live pipeline reliability.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">500+ Daily Records | live Reliability | Custom Data Scraping and Orchestration</span>
+                            <span class="metric-sub">Async Pipeline | Proxy Rotation</span>
+                        </div>
+                        <a href="#contact" class="card-flip-cta">
+                            <span>Internal Tool Specs</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 09: Forex Copy Trading System -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop" alt="Forex Copy Trading System" class="card-img">
+                            <span class="card-badge dark">FOREX & QUANT TRADING</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">Forex Copy Trading System</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">MQL4</span>
+                                <span class="tech-pill">MQL5</span>
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">WebSockets</span>
+                                <span class="tech-pill">Algo Execution</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">09 // QUANT SYSTEM SPECS</span>
+                            <h4 class="card-back-title">Forex Copy Trading System</h4>
+                            <p class="card-back-desc">High-frequency Forex copy trading platform supporting real-time master account symbol mapping, dynamic lot size calculation based on account equity, slippage filters, and instant risk alerts.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">&lt; 5ms Order Sync Latency</span>
+                            <span class="metric-sub">Multi-Account Equity Copier</span>
+                        </div>
+                        <a href="#contact" class="card-flip-cta">
+                            <span>Forex Engine Specs</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 10: Video Call & Dating App -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop" alt="Video Call & Dating Mobile App" class="card-img">
+                            <span class="card-badge orange">CONFIDENTIAL · NATIVE ANDROID</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">Video Call & Dating App</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">Kotlin</span>
+                                <span class="tech-pill">Java</span>
+                                <span class="tech-pill">WebRTC</span>
+                                <span class="tech-pill">Firebase</span>
+                                <span class="tech-pill">Room DB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">10 // CONFIDENTIAL MOBILE APP</span>
+                            <h4 class="card-back-title">Video Call & Dating App</h4>
+                            <p class="card-back-desc">Engineered real-time video streaming with low-latency WebRTC peer connections, FCM push notifications, offline Room DB caching, and MVVM architecture.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">150K+ Play Store Downloads</span>
+                            <span class="metric-sub">Confidential Client Application</span>
+                        </div>
+                        <a href="#contact" class="card-flip-cta">
+                            <span>Confidential Specs</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 11: Instagram Story Maker App -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" alt="Instagram Story Maker App" class="card-img">
+                            <span class="card-badge green">CONFIDENTIAL · MOBILE EDITING</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">Instagram Story Maker</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">Kotlin</span>
+                                <span class="tech-pill">Android SDK</span>
+                                <span class="tech-pill">Canvas API</span>
+                                <span class="tech-pill">OpenGL ES</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">11 // CONFIDENTIAL MOBILE APP</span>
+                            <h4 class="card-back-title">Instagram Story Maker</h4>
+                            <p class="card-back-desc">Built custom GPU-accelerated image/video editing engine with multi-layer text rendering, animated template exports, and zero frame-drop preview performance.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">4.8★ Play Store Rating</span>
+                            <span class="metric-sub">GPU Accelerated Editor</span>
+                        </div>
+                        <a href="#contact" class="card-flip-cta">
+                            <span>Confidential Specs</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 12: High-Speed Secure VPN App -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop" alt="High-Speed Secure VPN Client" class="card-img">
+                            <span class="card-badge dark">CONFIDENTIAL · MOBILE NETWORK</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">High-Speed Secure VPN</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">Kotlin</span>
+                                <span class="tech-pill">Java</span>
+                                <span class="tech-pill">WireGuard</span>
+                                <span class="tech-pill">Android VpnService</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">12 // CONFIDENTIAL MOBILE APP</span>
+                            <h4 class="card-back-title">High-Speed Secure VPN</h4>
+                            <p class="card-back-desc">Implemented native Android VpnService tunnel wrapper, dynamic server node selection, AES-256 traffic encryption, and battery-optimized background service.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">AES-256 Encryption</span>
+                            <span class="metric-sub">Zero Log Policy Architecture</span>
+                        </div>
+                        <a href="#contact" class="card-flip-cta">
+                            <span>Confidential Specs</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 13: Fast Privacy Web Browser App -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop" alt="Fast Privacy Web Browser" class="card-img">
+                            <span class="card-badge blue">CONFIDENTIAL · MOBILE BROWSER</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">Fast Privacy Web Browser</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">Java</span>
+                                <span class="tech-pill">Kotlin</span>
+                                <span class="tech-pill">WebKit</span>
+                                <span class="tech-pill">Room DB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">13 // CONFIDENTIAL MOBILE APP</span>
+                            <h4 class="card-back-title">Fast Privacy Web Browser</h4>
+                            <p class="card-back-desc">Engineered custom WebKit browser engine wrapper with domain ad-blocking rules, parallel tab state management, and private offline history encryption.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">Sub-300ms Page Rendering</span>
+                            <span class="metric-sub">Built-in AdBlock Engine</span>
+                        </div>
+                        <a href="#contact" class="card-flip-cta">
+                            <span>Confidential Specs</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 14: AI Photo Generator App -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop" alt="AI Photo Generator Mobile App" class="card-img">
+                            <span class="card-badge orange">CONFIDENTIAL · GENERATIVE AI</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">AI Photo Generator App</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">Kotlin</span>
+                                <span class="tech-pill">React Native</span>
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">FastAPI</span>
+                                <span class="tech-pill">OpenAI / Flux</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">14 // CONFIDENTIAL MOBILE APP</span>
+                            <h4 class="card-back-title">AI Photo Generator App</h4>
+                            <p class="card-back-desc">Engineered mobile client connected to asynchronous FastAPI diffusion pipelines with progressive image streaming, prompt enhancement algorithms, and high-res download exports.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">Generative Diffusion AI</span>
+                            <span class="metric-sub">Sub-3s Image Render Stream</span>
+                        </div>
+                        <a href="#contact" class="card-flip-cta">
+                            <span>Confidential Specs</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 15: Windows PC AI Monitoring Agent -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop" alt="Windows PC AI Monitoring Agent" class="card-img">
+                            <span class="card-badge orange">AI AGENTS & AUTOMATION</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">Windows PC AI Monitoring Agent</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">Claude API</span>
+                                <span class="tech-pill">psutil</span>
+                                <span class="tech-pill">Win32 API</span>
+                                <span class="tech-pill">Telegram Bot</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">15 // AI AGENT SPECS</span>
+                            <h4 class="card-back-title">Windows PC AI Agent</h4>
+                            <p class="card-back-desc">Built autonomous Windows background daemon integrating system health polling with LLM function calling to execute remote diagnostics, kill rogue processes, and trigger alert notifications over Telegram.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">Sub-500ms Diagnostics SLA</span>
+                            <span class="metric-sub">Remote Telegram Command Execution</span>
+                        </div>
+                        <a href="#contact" class="card-flip-cta">
+                            <span>Agent System Specs</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 16: Outreach Data Scraping Extension -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Outreach Data Scraping Extension" class="card-img">
+                            <span class="card-badge dark">BROWSER EXTENSION & SCRAPING</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">Outreach Data Scraping Extension</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">TypeScript</span>
+                                <span class="tech-pill">JavaScript</span>
+                                <span class="tech-pill">Manifest V3</span>
+                                <span class="tech-pill">DOM API</span>
+                                <span class="tech-pill">REST APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">16 // EXTENSION SPECS</span>
+                            <h4 class="card-back-title">Outreach Scraping Extension</h4>
+                            <p class="card-back-desc">Built high-speed browser extension capturing dynamic DOM lead parameters, verifying email/social handles, and dispatching structured payloads directly into CRM pipelines with zero browser latency.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">1-Click Lead Capture</span>
+                            <span class="metric-sub">Manifest V3 Secure Architecture</span>
+                        </div>
+                        <a href="#contact" class="card-flip-cta">
+                            <span>Extension Specs</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 17: AI Air Gesture File Transfer System -->
+            <div class="flipping-card-container">
+                <div class="flipping-card-inner">
+                    <!-- FRONT FACE -->
+                    <div class="card-face card-face-front">
+                        <div class="card-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop" alt="AI Air Gesture File Transfer System" class="card-img">
+                            <span class="card-badge orange">COMPUTER VISION & AI</span>
+                        </div>
+                        <div class="card-front-body">
+                            <h3 class="project-title">AI Air Gesture Transfer</h3>
+                            <div class="project-tech">
+                                <span class="tech-pill">Python</span>
+                                <span class="tech-pill">OpenCV</span>
+                                <span class="tech-pill">MediaPipe</span>
+                                <span class="tech-pill">Sockets</span>
+                                <span class="tech-pill">Computer Vision</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- BACK FACE -->
+                    <div class="card-face card-face-back">
+                        <div class="card-back-header">
+                            <span class="card-badge-mono">17 // COMPUTER VISION SPECS</span>
+                            <h4 class="card-back-title">AI Air Gesture Transfer</h4>
+                            <p class="card-back-desc">Engineered real-time hand landmark tracking and grab-and-drop gesture recognition, allowing users to catch files on-screen with simple hand motions and wirelessly transmit them across local networks.</p>
+                        </div>
+                        <div class="card-metrics-box">
+                            <span class="metric-highlight">30 FPS Vision Tracking</span>
+                            <span class="metric-sub">Touchless Air Gesture Transfer</span>
+                        </div>
+                        <a href="#contact" class="card-flip-cta">
+                            <span>Air Gesture Specs</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: WORK EXPERIENCE & CAREER JOURNEY -->
+    <section class="section-container alt-bg" id="experience">
+        <div class="section-header">
+            <div class="section-tag">
+                <span class="tag-number">04 //</span>
+                <span class="tag-text">CAREER JOURNEY</span>
+            </div>
+            <h2 class="section-title">WORK EXPERIENCE</h2>
+            <p class="section-subtitle">Proven history of engineering scalable software across AI startups, freelancing, and mobile development.</p>
+        </div>
+
+        <div class="experience-timeline">
+            <!-- Job 1 -->
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="timeline-period">2025 – PRESENT</span>
+                    <span class="timeline-location">Remote</span>
+                </div>
+                <div class="timeline-content">
+                    <h3 class="timeline-role">Full-Stack, Mobile & AI Agent Developer <span class="company-name">@ Freelance / Independent Contractor</span></h3>
+                    <ul class="timeline-bullets">
+                        <li>Engineered custom full-stack web applications (Next.js, Angular, React) and automated messaging microservices for 8+ clients.</li>
+                        <li>Designed automated quantitative algorithmic execution engines (MQL4/MQL5) with dynamic position sizing and automated risk controls, executing 100k+ backtested trade setups.</li>
+                        <li>Integrated secure payment gateways, RESTful microservices, and asynchronous Python/Node.js automation pipelines handling concurrent user traffic seamlessly.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="timeline-period">2023 – 2025</span>
+                    <span class="timeline-location">Surat, India</span>
+                </div>
+                <div class="timeline-content">
+                    <h3 class="timeline-role">Full-Stack & Mobile Developer <span class="company-name">@ GalaxyGlobalTech</span></h3>
+                    <ul class="timeline-bullets">
+                        <li>Architected production AI pipelines utilizing Claude and OpenAI APIs, processing 50k+ automated monthly requests with sub-500ms response routing and structured data generation.</li>
+                        <li>Built high-throughput SaaS platforms using Next.js, React, Angular, Node.js, and Supabase (PostgreSQL).</li>
+                        <li>Automated cloud deployments across GCP and Hetzner VPS using Docker, Nginx, and GitHub Actions CI/CD pipelines.</li>
+                        <li>Implemented MCP Server integration for seamless connection between AI agents and third-party tools.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Job 3 -->
+            <div class="timeline-item">
+                <div class="timeline-meta">
+                    <span class="timeline-period">2021 – 2023</span>
+                    <span class="timeline-location">Surat, India</span>
+                </div>
+                <div class="timeline-content">
+                    <h3 class="timeline-role">Mobile Application Developer <span class="company-name">@ Sober Infotech</span></h3>
+                    <ul class="timeline-bullets">
+                        <li>Engineered and deployed 5+ production Android applications in Java and Kotlin to the Google Play Store, reaching 150k+ lifetime downloads.</li>
+                        <li>Implemented offline-first data synchronization using Room DB and Android Background Services, reducing app memory usage and eliminating UI thread blocking.</li>
+                        <li>Achieved a 99.7% crash-free session rate by establishing proactive crash logging, memory leak debugging, and automated release pipelines.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="timeline-item education">
+                <div class="timeline-meta">
+                    <span class="timeline-period">2017 – 2020</span>
+                    <span class="timeline-location">GTU, Gujarat</span>
+                </div>
+                <div class="timeline-content">
+                    <h3 class="timeline-role">Bachelor of Engineering in Computer Engineering <span class="company-name">@ GTU</span></h3>
+                    <p class="timeline-edu-desc">Comprehensive computer science fundamentals including algorithms, database management, software engineering, and mobile architecture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: SERVICES & TECH STACK -->
+    <section class="section-container" id="services">
+        <div class="section-header">
+            <div class="section-tag">
+                <span class="tag-number">05 //</span>
                 <span class="tag-text">SERVICES & TECH STACK</span>
             </div>
             <h2 class="section-title">CORE CAPABILITIES</h2>
@@ -188,64 +1064,113 @@
         </div>
 
         <div class="services-grid">
-            <!-- Capability 1 -->
+            <!-- Capability 1: AI & Agent Systems -->
             <div class="service-card">
                 <div class="service-icon">🤖</div>
-                <h3 class="service-title">AI Agent Systems & RAG</h3>
-                <p class="service-desc">Building autonomous LLM agents, vector search retrieval (RAG), custom tool integrations, and intelligent workflow automation.</p>
+                <h3 class="service-title">AI Agent Systems & MCP</h3>
+                <p class="service-desc">Architecting production AI pipelines with Claude & OpenAI APIs, LangChain agent chains, RAG vector retrieval, N8N, Zapier, and MCP Server integrations.</p>
                 <div class="service-tech-tags">
-                    <span class="skill-badge orange">LangChain</span>
+                    <span class="skill-badge orange">Claude API</span>
                     <span class="skill-badge orange">OpenAI API</span>
-                    <span class="skill-badge orange">Qdrant Vector DB</span>
+                    <span class="skill-badge orange">MCP Server</span>
+                    <span class="skill-badge orange">LangChain</span>
+                    <span class="skill-badge orange">RAG Systems</span>
+                    <span class="skill-badge orange">N8N</span>
+                    <span class="skill-badge orange">Zapier</span>
                 </div>
             </div>
 
-            <!-- Capability 2 -->
+            <!-- Capability 2: Full-Stack Web Architecture -->
             <div class="service-card">
                 <div class="service-icon">⚡</div>
-                <h3 class="service-title">Full Stack Web Engineering</h3>
-                <p class="service-desc">Designing modern Next.js/React web applications with fast, secure Node.js & Python FastAPI backend microservices.</p>
+                <h3 class="service-title">Full-Stack Web Architecture</h3>
+                <p class="service-desc">Designing modern Next.js, React, Angular, and Node.js/MERN platforms with Supabase (PostgreSQL), FastAPI microservices, RESTful APIs, and WebSockets.</p>
                 <div class="service-tech-tags">
                     <span class="skill-badge highlight">Next.js</span>
                     <span class="skill-badge highlight">React</span>
-                    <span class="skill-badge">TypeScript</span>
+                    <span class="skill-badge highlight">Angular</span>
+                    <span class="skill-badge highlight">Node.js/MERN</span>
                     <span class="skill-badge">FastAPI</span>
+                    <span class="skill-badge">PostgreSQL</span>
+                    <span class="skill-badge">Supabase</span>
+                    <span class="skill-badge">WebSockets</span>
+                    <span class="skill-badge">REST APIs</span>
                 </div>
             </div>
 
-            <!-- Capability 3 -->
+            <!-- Capability 3: Mobile Engineering -->
             <div class="service-card">
                 <div class="service-icon">📱</div>
-                <h3 class="service-title">Native & Mobile Engineering</h3>
-                <p class="service-desc">Developing high-performance Flutter and Android apps with butter-smooth 60fps UI, native bridges, and offline database sync.</p>
+                <h3 class="service-title">Mobile Application Engineering</h3>
+                <p class="service-desc">Deploying 150k+ downloaded Android applications in Java and Kotlin, Room DB offline sync, React Native, Clean Architecture, MVVM, and Play Store Lifecycle.</p>
                 <div class="service-tech-tags">
-                    <span class="skill-badge">Flutter</span>
-                    <span class="skill-badge">Dart</span>
+                    <span class="skill-badge">Java</span>
+                    <span class="skill-badge">Kotlin</span>
                     <span class="skill-badge">Android Native</span>
+                    <span class="skill-badge">React Native</span>
+                    <span class="skill-badge">Room DB</span>
+                    <span class="skill-badge">Clean Arch</span>
+                    <span class="skill-badge">MVVM</span>
+                    <span class="skill-badge">Background Services</span>
                 </div>
             </div>
 
-            <!-- Capability 4 -->
+            <!-- Capability 4: Cloud Infrastructure & DevOps -->
             <div class="service-card">
                 <div class="service-icon">🛠️</div>
-                <h3 class="service-title">Cloud Infrastructure & DevOps</h3>
-                <p class="service-desc">Architecting PostgreSQL/Redis databases, Docker container environments, automated CI/CD deployment, and AWS cloud setups.</p>
+                <h3 class="service-title">DevOps, Cloud & Automation</h3>
+                <p class="service-desc">Deploying high-availability infrastructure across GCP, Hetzner VPS, and Vercel using Docker, Nginx, GitHub Actions CI/CD, Asyncio, and Playwright data pipelines.</p>
                 <div class="service-tech-tags">
-                    <span class="skill-badge">PostgreSQL</span>
+                    <span class="skill-badge">GCP</span>
+                    <span class="skill-badge">Vercel</span>
+                    <span class="skill-badge">Hetzner VPS</span>
                     <span class="skill-badge">Docker</span>
-                    <span class="skill-badge">AWS Cloud</span>
-                    <span class="skill-badge">Redis</span>
+                    <span class="skill-badge">Nginx</span>
+                    <span class="skill-badge">CI/CD Pipelines</span>
+                    <span class="skill-badge">Git/GitHub</span>
+                    <span class="skill-badge">Asyncio</span>
+                    <span class="skill-badge">Playwright</span>
+                </div>
+            </div>
+
+            <!-- Capability 5: Algorithmic Trading & Execution Bots -->
+            <div class="service-card">
+                <div class="service-icon">📈</div>
+                <h3 class="service-title">Algorithmic Trading & Execution Bots</h3>
+                <p class="service-desc">Building automated quantitative execution engines in MQL4 and MQL5 with dynamic position sizing, automated risk controls, and backtested trade setups.</p>
+                <div class="service-tech-tags">
+                    <span class="skill-badge highlight">MQL4</span>
+                    <span class="skill-badge highlight">MQL5</span>
+                    <span class="skill-badge orange">Trading Bots</span>
+                    <span class="skill-badge">Algo Execution</span>
+                    <span class="skill-badge">Risk Controls</span>
+                    <span class="skill-badge">Position Sizing</span>
+                </div>
+            </div>
+
+            <!-- Capability 6: Languages & Core Runtimes -->
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3 class="service-title">Languages & Core Runtimes</h3>
+                <p class="service-desc">Strong foundation in strongly-typed systems, asynchronous execution runtimes, object-oriented design patterns, and high-performance database querying.</p>
+                <div class="service-tech-tags">
+                    <span class="skill-badge highlight">TypeScript</span>
+                    <span class="skill-badge highlight">JavaScript</span>
+                    <span class="skill-badge">Java</span>
+                    <span class="skill-badge">Kotlin</span>
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">SQL</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 4: CONTACT & GET IN TOUCH -->
+    <!-- SECTION 5: CONTACT & GET IN TOUCH -->
     <section class="section-container contact-section" id="contact">
         <div class="contact-box">
             <div class="contact-left">
                 <div class="section-tag">
-                    <span class="tag-number">03 //</span>
+                    <span class="tag-number">04 //</span>
                     <span class="tag-text">GET IN TOUCH</span>
                 </div>
                 <h2 class="contact-title">LET'S BUILD SOMETHING EXTRAORDINARY</h2>
@@ -309,7 +1234,43 @@
         </div>
     </footer>
 
-    <!-- Production JavaScript Assets -->
+    <!-- Project Modal Popup -->
+    <div id="project-modal" class="project-modal-overlay" aria-hidden="true">
+        <div class="project-modal-container">
+            <button id="project-modal-close" class="project-modal-close-btn" aria-label="Close modal">&times;</button>
+            <div class="project-modal-body">
+                <div class="project-modal-image-wrapper">
+                    <img id="modal-img" src="" alt="Project Image">
+                    <span id="modal-badge" class="card-badge"></span>
+                </div>
+                <div class="project-modal-content">
+                    <span id="modal-mono" class="card-badge-mono"></span>
+                    <h2 id="modal-title" class="project-modal-title"></h2>
+                    <div id="modal-tech" class="project-tech modal-tech-list"></div>
+                    <div class="modal-section">
+                        <h3>Overview & Architecture</h3>
+                        <p id="modal-desc" class="modal-text"></p>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Key Performance Metrics</h3>
+                        <div class="card-metrics-box modal-metrics-box">
+                            <span id="modal-metric-highlight" class="metric-highlight"></span>
+                            <span id="modal-metric-sub" class="metric-sub"></span>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <a id="modal-cta" href="#" target="_blank" rel="noopener" class="card-flip-cta modal-cta-btn">
+                            <span id="modal-cta-text">Visit Live Application</span>
+                            <span class="arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JS Bundle -->
+    <script src="assets/js/about.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
