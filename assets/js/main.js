@@ -158,12 +158,67 @@
     }
 
     /* --------------------------------------------------------------------------
-       3. Active Scroll Navigation Tracking
+       3. Smooth Scroll Router — Clean URL (No # Hash Fragments)
+       -------------------------------------------------------------------------- */
+    function initSmoothScrollRouter() {
+        // Intercept ALL internal hash links and scroll smoothly without touching the URL
+        document.addEventListener('click', function (e) {
+            const anchor = e.target.closest('a[href^="#"]');
+            if (!anchor) return;
+
+            const targetId = anchor.getAttribute('href').slice(1);
+            if (!targetId) return;
+
+            const targetEl = document.getElementById(targetId);
+            if (!targetEl) return;
+
+            e.preventDefault();
+
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // Keep the URL clean — push a clean path with no hash
+            history.replaceState(null, '', window.location.pathname);
+        });
+
+        // If the page loads with a hash in the URL, scroll to it then clean the URL
+        if (window.location.hash) {
+            const hashTarget = document.getElementById(window.location.hash.slice(1));
+            if (hashTarget) {
+                setTimeout(() => {
+                    hashTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    history.replaceState(null, '', window.location.pathname);
+                }, 100);
+            }
+        }
+    }
+
+    /* --------------------------------------------------------------------------
+       3B. Active Scroll Navigation Tracking
        -------------------------------------------------------------------------- */
     function initScrollTracking() {
+        // Map each nav item to its target section ID (extracted from href="#id")
+        const navMap = new Map();
+        centerNavItems.forEach(item => {
+            const href = item.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                navMap.set(href.slice(1), item);
+            }
+        });
+
+        const headerBar = document.querySelector('.hero-top-bar');
+
         window.addEventListener('scroll', () => {
             let current = '';
             const scrollY = window.pageYOffset;
+
+            // Toggle semi-transparent header background on scroll
+            if (headerBar) {
+                if (scrollY > 80) {
+                    headerBar.classList.add('header-scrolled');
+                } else {
+                    headerBar.classList.remove('header-scrolled');
+                }
+            }
 
             sections.forEach(section => {
                 const sectionTop = section.offsetTop - 120;
@@ -174,12 +229,9 @@
             });
 
             if (current) {
-                centerNavItems.forEach(item => {
-                    item.classList.remove('active');
-                    if (item.getAttribute('href') === `#${current}`) {
-                        item.classList.add('active');
-                    }
-                });
+                centerNavItems.forEach(item => item.classList.remove('active'));
+                const activeItem = navMap.get(current);
+                if (activeItem) activeItem.classList.add('active');
             }
         });
     }
@@ -287,6 +339,7 @@
     function init() {
         initSpotlightReveal();
         initMobileMenu();
+        initSmoothScrollRouter();
         initTypographyParallax();
         initScrollTracking();
         initScrollRevealEngine();
