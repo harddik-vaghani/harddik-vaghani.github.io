@@ -1193,7 +1193,7 @@
             </div>
 
             <div class="contact-right">
-                <form id="contact-form" class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Message dispatched! Thank you for reaching out.');">
+                <form id="contact-form" class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); (function(){ var name = document.getElementById('form-name').value.trim(); var email = document.getElementById('form-email').value.trim(); var message = document.getElementById('form-message').value.trim(); var subject = encodeURIComponent('Portfolio Enquiry from ' + name); var body = encodeURIComponent('Hi Hardik,\n\nName: ' + name + '\nEmail: ' + email + '\n\n' + message + '\n'); window.location.href = 'mailto:harddikvaghani@gmail.com?subject=' + subject + '&body=' + body; })();">
                     <div class="form-group">
                         <label for="form-name">YOUR NAME</label>
                         <input type="text" id="form-name" placeholder="Elon Musk / Founder / CTO" required>
