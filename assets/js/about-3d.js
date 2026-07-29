@@ -80,7 +80,7 @@
 
         // 1. Scene Setup
         scene = new THREE.Scene();
-        scene.fog = new THREE.FogExp2(0xfaf8f5, 0.02);
+        scene.fog = new THREE.FogExp2(0xf5f1e8, 0.02);
 
         const width = container.clientWidth || 600;
         const height = container.clientHeight || 520;

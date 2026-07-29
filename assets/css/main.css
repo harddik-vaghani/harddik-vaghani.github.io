@@ -5,8 +5,8 @@
 
 /* --- CSS Variables & Design System --- */
 :root {
-    --bg-color: #FAF8F5;
-    --bg-alt: #F2EFE9;
+    --bg-color: #F5F1E8;
+    --bg-alt: #EBE6DA;
     --text-orange: #FF3B00;
     --text-dark: #18181A;
     --text-muted: #55555C;
@@ -14,8 +14,8 @@
     --btn-bg: #111111;
     --btn-hover: #000000;
     --badge-bg: rgba(255, 255, 255, 0.9);
-    --card-bg: rgba(255, 255, 255, 0.82);
-    --border-light: rgba(0, 0, 0, 0.06);
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --border-light: rgba(0, 0, 0, 0.07);
 
     --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -23,7 +23,7 @@
 }
 
 /* ==========================================================================
-   INITIAL OFF-WHITE PLAIN LOADING SCREEN & DARK ORANGE ROTATING SPINNER
+   INITIAL CREAM LOADING SCREEN & DARK ORANGE ROTATING SPINNER
    ========================================================================== */
 .initial-preloader {
     position: fixed;
@@ -31,7 +31,7 @@
     width: 100vw;
     height: 100vh;
     height: 100dvh;
-    background-color: #FAF8F5;
+    background-color: var(--bg-color);
     z-index: 99999;
     display: flex;
     align-items: center;
@@ -1664,7 +1664,7 @@ body {
     height: 12px;
     border-radius: 50%;
     background: var(--text-orange);
-    border: 3px solid #FAF8F5;
+    border: 3px solid var(--bg-color);
     box-shadow: 0 0 0 2px rgba(255, 59, 0, 0.3);
 }
 
@@ -1834,7 +1834,7 @@ body {
 .card-face-back {
     transform: rotateY(180deg) translateZ(1px);
     -webkit-transform: rotateY(180deg) translateZ(1px);
-    background: #FAF8F5;
+    background: var(--bg-color);
     padding: 24px;
     justify-content: space-between;
     border-color: rgba(255, 59, 0, 0.25);
@@ -1977,7 +1977,7 @@ body {
     width: 92%;
     max-width: 960px;
     max-height: 90vh;
-    background: #FAF8F5;
+    background: var(--bg-color);
     border-radius: 28px;
     border: 1px solid rgba(24, 24, 26, 0.12);
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
@@ -2866,7 +2866,7 @@ body {
         height: 12px !important;
         border-radius: 50% !important;
         background: #FF3B00 !important;
-        border: 2.5px solid #FAF8F5 !important;
+        border: 2.5px solid var(--bg-color) !important;
         box-shadow: 0 0 0 3px rgba(255, 59, 0, 0.25) !important;
         animation: timelinePulse 2s infinite ease-in-out !important;
     }

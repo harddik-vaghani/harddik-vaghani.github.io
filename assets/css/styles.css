@@ -5,7 +5,7 @@
 
 /* --- CSS Variables & Design System --- */
 :root {
-    --bg-color: #FAF8F5;
+    --bg-color: var(--bg-color);
     --bg-alt: #F2EFE9;
     --text-orange: #FF3B00;
     --text-dark: #18181A;
@@ -1678,7 +1678,7 @@ body {
         height: 12px !important;
         border-radius: 50% !important;
         background: #FF3B00 !important;
-        border: 2.5px solid #FAF8F5 !important;
+        border: 2.5px solid var(--bg-color) !important;
         box-shadow: 0 0 0 3px rgba(255, 59, 0, 0.25) !important;
         animation: timelinePulse 2s infinite ease-in-out !important;
     }
