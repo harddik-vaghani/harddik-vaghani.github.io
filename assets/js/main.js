@@ -128,9 +128,9 @@
                 return;
             }
 
-            // Smooth lerping (0.07 damping)
-            currentX += (mouseX - currentX) * 0.07;
-            currentY += (mouseY - currentY) * 0.07;
+            // Ultra-smooth lerping (0.05 damping)
+            currentX += (mouseX - currentX) * 0.05;
+            currentY += (mouseY - currentY) * 0.05;
 
             // 3D Tilt and Translate for main typography container
             const transX = currentX * -36;    // 36px horizontal shift opposite to cursor
@@ -246,41 +246,44 @@
 
         // Header bar slide down
         tl.from('.hero-top-bar', {
-            y: -40,
+            y: -30,
             opacity: 0,
             duration: 1
-        }, 0.2);
+        }, 0.15);
 
-        // Giant typography pop in
+        // Giant typography entrance with subtle scale & smooth float
         tl.from('.name-first', {
-            x: -90,
+            x: -70,
             opacity: 0,
-            scale: 0.9,
-            duration: 1.3
-        }, 0.4);
+            scale: 0.94,
+            duration: 1.4,
+            ease: 'power3.out'
+        }, 0.3);
 
         tl.from('.name-last', {
-            x: 90,
+            x: 70,
             opacity: 0,
-            scale: 0.9,
-            duration: 1.3
-        }, 0.4);
-
-        // Centered Character rise up from bottom
-        tl.from('#hero-avatar-wrapper', {
-            y: 140,
-            opacity: 0,
+            scale: 0.94,
             duration: 1.4,
+            ease: 'power3.out'
+        }, 0.3);
+
+        // Centered Character rise up smoothly from bottom
+        tl.from('#hero-avatar-wrapper', {
+            y: 100,
+            opacity: 0,
+            duration: 1.5,
             ease: 'power4.out'
-        }, 0.6);
+        }, 0.5);
 
         // Bottom left headline & CTA
         tl.from('#hero-bottom-left > *', {
-            y: 30,
+            y: 25,
             opacity: 0,
-            stagger: 0.15,
-            duration: 1
-        }, 0.8);
+            stagger: 0.12,
+            duration: 1,
+            ease: 'power3.out'
+        }, 0.75);
 
         // ScrollTrigger reveal for sections if ScrollTrigger is registered
         if (typeof ScrollTrigger !== 'undefined') {
@@ -334,8 +337,15 @@
     }
 
     /* --------------------------------------------------------------------------
-       5. Initialization
+       5. Initial Preloader Dismissal & Main Initialization
        -------------------------------------------------------------------------- */
+    function hideInitialPreloader() {
+        const preloader = document.getElementById('initial-preloader');
+        if (preloader) {
+            preloader.classList.add('is-loaded');
+        }
+    }
+
     function init() {
         initSpotlightReveal();
         initMobileMenu();
@@ -343,7 +353,24 @@
         initTypographyParallax();
         initScrollTracking();
         initScrollRevealEngine();
-        runEntranceAnimations();
+
+        let entranceTriggered = false;
+        function triggerHeroLoad() {
+            if (entranceTriggered) return;
+            entranceTriggered = true;
+            hideInitialPreloader();
+            runEntranceAnimations();
+        }
+
+        if (document.readyState === 'complete') {
+            setTimeout(triggerHeroLoad, 150);
+        } else {
+            window.addEventListener('load', function () {
+                setTimeout(triggerHeroLoad, 150);
+            });
+            // Safety fallback to guarantee preloader removal even if slow network
+            setTimeout(triggerHeroLoad, 1000);
+        }
     }
 
     if (document.readyState === 'loading') {

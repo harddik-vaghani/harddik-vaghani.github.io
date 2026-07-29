@@ -36,13 +36,13 @@ export function FlippingCard({
       >
         {/* Front Face */}
         <div className="absolute inset-0 h-full w-full rounded-[inherit] bg-white text-neutral-950 [transform-style:preserve-3d] [backface-visibility:hidden] [transform:rotateY(0deg)] dark:bg-zinc-950 dark:text-neutral-50">
-          <div className="[transform:translateZ(70px)_scale(.93)] h-full w-full">
+          <div className="h-full w-full">
             {frontContent}
           </div>
         </div>
         {/* Back Face */}
         <div className="absolute inset-0 h-full w-full rounded-[inherit] bg-white text-neutral-950 [transform-style:preserve-3d] [backface-visibility:hidden] [transform:rotateY(180deg)] dark:bg-zinc-950 dark:text-neutral-50">
-          <div className="[transform:translateZ(70px)_scale(.93)] h-full w-full">
+          <div className="h-full w-full">
             {backContent}
           </div>
         </div>

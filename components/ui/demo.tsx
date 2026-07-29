@@ -179,7 +179,7 @@ const cardsData: CardData[] = [
     badge: "FOREX & QUANT TRADING",
     isPrivate: true,
     front: {
-      imageSrc: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop",
+      imageSrc: "assets/images/copytrading.webp",
       imageAlt: "Forex Copy Trading System",
       title: "Forex Copy Trading System",
       description: "",
@@ -191,46 +191,13 @@ const cardsData: CardData[] = [
       buttonText: "Forex Engine Specs ↗",
     },
   },
-  {
-    id: "video-call-dating",
-    badge: "CONFIDENTIAL · NATIVE ANDROID",
-    isPrivate: true,
-    front: {
-      imageSrc: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop",
-      imageAlt: "Video Call & Dating Mobile App",
-      title: "Video Call & Dating App",
-      description: "",
-      tech: ["Kotlin", "Java", "WebRTC", "Firebase", "Room DB"],
-    },
-    back: {
-      description: "Engineered real-time video streaming with low-latency WebRTC peer connections, FCM push notifications, offline Room DB caching, and MVVM architecture.",
-      metrics: "150K+ Downloads | Confidential App",
-      buttonText: "Confidential Specs ↗",
-    },
-  },
-  {
-    id: "instagram-story-maker",
-    badge: "CONFIDENTIAL · MOBILE EDITING",
-    isPrivate: true,
-    front: {
-      imageSrc: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
-      imageAlt: "Instagram Story Maker App",
-      title: "Instagram Story Maker",
-      description: "",
-      tech: ["Kotlin", "Android SDK", "Canvas API", "OpenGL ES"],
-    },
-    back: {
-      description: "Built custom GPU-accelerated image/video editing engine with multi-layer text rendering, animated template exports, and zero frame-drop preview performance.",
-      metrics: "4.8★ Rating | GPU Accelerated Editor",
-      buttonText: "Confidential Specs ↗",
-    },
-  },
+
   {
     id: "secure-vpn-app",
     badge: "CONFIDENTIAL · MOBILE NETWORK",
     isPrivate: true,
     front: {
-      imageSrc: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop",
+      imageSrc: "assets/images/vpnapp.webp",
       imageAlt: "High-Speed Secure VPN Client",
       title: "High-Speed Secure VPN",
       description: "",
@@ -247,7 +214,7 @@ const cardsData: CardData[] = [
     badge: "CONFIDENTIAL · MOBILE BROWSER",
     isPrivate: true,
     front: {
-      imageSrc: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop",
+      imageSrc: "assets/images/securebrowser.webp",
       imageAlt: "Fast Privacy Web Browser",
       title: "Fast Privacy Web Browser",
       description: "",
@@ -264,9 +231,9 @@ const cardsData: CardData[] = [
     badge: "CONFIDENTIAL · GENERATIVE AI",
     isPrivate: true,
     front: {
-      imageSrc: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&h=400&fit=crop",
+      imageSrc: "assets/images/aiphotogen.webp",
       imageAlt: "AI Photo Generator Mobile App",
-      title: "AI Photo Generator App",
+      title: "AI Photo Generation App with Admin panel",
       description: "",
       tech: ["Kotlin", "React Native", "Python", "FastAPI", "OpenAI / Flux"],
     },
@@ -281,11 +248,11 @@ const cardsData: CardData[] = [
     badge: "AI AGENTS & AUTOMATION",
     isPrivate: true,
     front: {
-      imageSrc: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop",
+      imageSrc: "assets/images/windowspcagent.webp",
       imageAlt: "Windows PC AI Monitoring Agent",
-      title: "Windows PC AI Monitoring Agent",
+      title: "Windows PC Monitoring Agent with Telegram Controls",
       description: "",
-      tech: ["Python", "Claude API", "psutil", "Win32 API", "Telegram Bot"],
+      tech: ["Python", "psutil", "Win32 API", "Telegram Bot"],
     },
     back: {
       description: "Built autonomous Windows background daemon integrating system health polling with LLM function calling to execute remote diagnostics, kill rogue processes, and trigger alert notifications over Telegram.",
@@ -298,7 +265,7 @@ const cardsData: CardData[] = [
     badge: "BROWSER EXTENSION & SCRAPING",
     isPrivate: true,
     front: {
-      imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      imageSrc: "assets/images/outreachwebscrap.webp",
       imageAlt: "Outreach Data Scraping Extension",
       title: "Outreach Data Scraping Extension",
       description: "",
@@ -315,9 +282,9 @@ const cardsData: CardData[] = [
     badge: "COMPUTER VISION & AI",
     isPrivate: true,
     front: {
-      imageSrc: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop",
+      imageSrc: "assets/images/airgesture.webp",
       imageAlt: "AI Air Gesture File Transfer System",
-      title: "AI Air Gesture Transfer",
+      title: "Air Gesture Transfer",
       description: "",
       tech: ["Python", "OpenCV", "MediaPipe", "Sockets", "Computer Vision"],
     },
@@ -325,6 +292,23 @@ const cardsData: CardData[] = [
       description: "Engineered real-time hand landmark tracking and grab-and-drop gesture recognition, allowing users to catch files on-screen with simple hand motions and wirelessly transmit them across local networks.",
       metrics: "30 FPS Vision Tracking | Touchless Share",
       buttonText: "Air Gesture Specs ↗",
+    },
+  },
+  {
+    id: "tradingview-chart-indicator",
+    badge: "QUANT & TRADINGVIEW",
+    isPrivate: true,
+    front: {
+      imageSrc: "assets/images/tradinview.webp",
+      imageAlt: "Custom Chart Indicator on TradingView",
+      title: "Custom Chart Indicator on Tradingview",
+      description: "",
+      tech: ["Pine Script", "TradingView", "Algorithmic Trading"],
+    },
+    back: {
+      description: "Engineered custom Pine Script indicators and strategy backtesting scripts for TradingView, featuring automated buy/sell signals, multi-timeframe trend analysis, and custom alert webhooks.",
+      metrics: "Real-time Webhook Alerts | Strategy Engine",
+      buttonText: "Indicator Specs ↗",
     },
   },
 ];
@@ -359,9 +343,6 @@ function GenericCardFront({ data, badge }: GenericCardFrontProps) {
           alt={data.imageAlt}
           className="w-full h-full object-cover rounded-lg"
         />
-        <span className="absolute top-3 left-3 bg-neutral-900/90 text-white text-[11px] font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">
-          {badge}
-        </span>
       </div>
       <h3 className="text-lg font-bold text-neutral-900">{data.title}</h3>
       <p className="text-xs text-neutral-600 mt-1.5 line-clamp-2">

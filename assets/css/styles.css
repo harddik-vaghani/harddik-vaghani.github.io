@@ -310,20 +310,19 @@ body {
     transform-style: preserve-3d;
 }
 
-/* Top Line: HARDIK (Light orange by default, dark orange on hover - Ultra Crisp) */
+/* Top Line: HARDIK (Dark orange by default) */
 .name-first {
     font-family: var(--font-heading);
     font-weight: 900;
     font-size: clamp(3.5rem, 10.5vw, 12rem);
     letter-spacing: -0.035em;
     text-transform: uppercase;
-    color: #FF8552;
+    color: #FF3B00;
     text-shadow: none;
     display: block;
     margin-left: 6vw;
     pointer-events: auto;
     cursor: pointer;
-    transition: color 0.35s ease;
 }
 
 .name-first:hover {
@@ -1548,7 +1547,7 @@ body {
         height: 180px !important;
     }
 
-    .card-badge {
+    .flipping-card-container .card-badge {
         font-size: 8.5px !important;
         padding: 3px 6px !important;
     }
